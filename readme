@@ -1,3 +1,4 @@
+The instace must have IAM Role s3fullaccess
 Install docker runtime environment, docker compose
 then clone the repository
 cd python-flask-docker
