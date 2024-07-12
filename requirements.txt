@@ -1,0 +1,4 @@
+Flask==2.0.1
+pymysql
+boto3
+werkzeug==2.0

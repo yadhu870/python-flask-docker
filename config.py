@@ -1,6 +1,6 @@
-customhost = "employee.coghw13fheqo.us-east-2.rds.amazonaws.com"
-customuser = "intellipaat"
-custompass = "intellipaat123"
-customdb = "employee"
-custombucket = "addemployee"
-customregion = "us-east-2"
+customhost = "db"
+customuser = "myuser"
+custompass = "mypassword"
+customdb = "mydatabase"
+custombucket = "pythonweb2"  # If still needed
+customregion = "us-west-2"  # If still needed
