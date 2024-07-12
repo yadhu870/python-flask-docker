@@ -1,8 +1,7 @@
 Install docker runtime environment, docker compose
 then clone the repository
 cd python-flask-docker
-docker-compose build
-docker-compose up 
+docker-compose up -d
 http://publicip:80
 incase it fail  
 http://publicip:8080 (phpmyadmin)
@@ -65,5 +64,5 @@ COMMIT;
 
 
 click GO
-remove all docker images and again docker-compose build, docker-compose up -d
+remove all docker images and again docker-compose up -d
 http://publicip:80 
