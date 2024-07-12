@@ -1,13 +1,69 @@
-sudo apt-get update
-# For Sql-client
-sudo apt-get install mysql-client
+Install docker runtime environment, docker compose
+then clone the repository
+cd python-flask-docker
+docker-compose build
+docker-compose up -d
+http://publicip:80
+incase it fail  
+http://publicip:8080 (phpmyadmin)
+username: root
+password: rootpassword
+then click -->mydatabase --> sql
+then past the given code
 
-# For python and related frameworks
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: db
+-- Generation Time: Jul 12, 2024 at 03:55 PM
+-- Server version: 5.7.44
+-- PHP Version: 8.2.8
 
-sudo apt-get install python3
-sudo apt-get install python3-flask
-sudo apt-get install python3-pymysql
-sudo apt-get install python3-boto3
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-# for running application
-sudo python3 Empapp.py
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `mydatabase`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employee`
+--
+
+CREATE TABLE `employee` (
+  `emp_id` int(10) NOT NULL,
+  `first_name` varchar(20) NOT NULL,
+  `last_name` varchar(20) NOT NULL,
+  `pri_skill` varchar(20) NOT NULL,
+  `location` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`emp_id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+click GO
+remove all docker images and again docker-compose build, docker-compose up -d
+http://publicip:80 
